@@ -491,9 +491,26 @@ strategy to deal with them: <code>na.omit()</code>,
 <p>Create a new column called <code>duration</code> in the kings
 dataset, utilizing the <code>mutate()</code> function from tidyverse.
 Check with your group to brainstorm the options.</p>
-<pre class="r"><code># YOUR CODE
-kings&lt;-kings %&gt;% 
-  mutate(duration=End_of_reign-Start_of_reign)</code></pre>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)  # Install if you haven&#39;t already</code></pre>
+<pre><code>## Warning: package &#39;tidyverse&#39; is in use and will not be installed</code></pre>
+<pre class="r"><code>library(tidyverse)  # Load the tidyverse package
+kings &lt;- kings %&gt;%
+  mutate(duration = End_of_reign - Start_of_reign)
+print(kings)</code></pre>
+<pre><code>## # A tibble: 56 × 7
+##    Name_of_monarch    Start_of_reign End_of_reign Birth Death Duration duration
+##    &lt;chr&gt;                       &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;
+##  1 Gorm_den_Gamle                936          958    NA   958       22       22
+##  2 Harald_1_Blaatand              NA          987    NA   987       NA       NA
+##  3 Svend_1_Tveskaeg               NA         1014    NA  1014       NA       NA
+##  4 Harald_2                     1014         1018    NA  1018        4        4
+##  5 Knud_1_den_Store             1018         1035   995  1035       17       17
+##  6 Hardeknud                    1035         1042  1020  1042        7        7
+##  7 Magnus_den_Gode              1042         1047  1024  1047        5        5
+##  8 Svend_2_Estridsen            1047         1074    NA  1076       27       27
+##  9 Harald_3_Hen                 1074         1080    NA  1080        6        6
+## 10 Knud_2_den_Hellige           1080         1086    NA  1086        6        6
+## # ℹ 46 more rows</code></pre>
 </div>
 <div id="calculate-the-average-duration-of-reign-for-all-rulers" class="section level2">
 <h2>Calculate the average duration of reign for all rulers</h2>
